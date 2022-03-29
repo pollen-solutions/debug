@@ -4,22 +4,10 @@ declare(strict_types=1);
 
 namespace Pollen\Debug;
 
-use Pollen\Support\Concerns\BootableTraitInterface;
-use Pollen\Support\Concerns\ConfigBagAwareTraitInterface;
 use Pollen\Support\Proxy\ContainerProxyInterface;
 
-interface DebugManagerInterface extends
-    BootableTraitInterface,
-    ContainerProxyInterface,
-    ConfigBagAwareTraitInterface
+interface DebugManagerInterface extends ContainerProxyInterface
 {
-    /**
-     * Booting.
-     *
-     * @return void
-     */
-    public function boot(): void;
-
     /**
      * Debug bar instance.
      *
